@@ -2,7 +2,7 @@
 #include "httpServer.h"
 
 // 获取报头的每一行
-// 要把 \r -> \n || \r\n -> \n
+// 要把 \r -> \n || \r\n -> \n    \r是回车
 int get_line(int sock, char line[], int size)
 {
     int i = 0;
