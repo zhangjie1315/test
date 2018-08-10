@@ -48,7 +48,7 @@ unsigned short chksum(unsigned short *addr,int len)
        //*1000变成毫秒
 return ret;
 }
-//(1)组包
+//(2)组包
   //组包    num:ICMP报文的标识符字段
   //结构体 !vim /usr/include/netinet/ip_icmp.h 
   //icmp的结构体：用union联合体   用define简单
@@ -73,7 +73,7 @@ return ret;
      //sfd 套接字描述符
      //pid  组ICMP报文的标识符字段
      //addr 发送的目标机器
-//（2）发包
+//（1）发包
 void send_packet(int sfd,pid_t pid,struct sockaddr_in addr){
     //发送包的编号
     sendnum++;
@@ -83,7 +83,6 @@ void send_packet(int sfd,pid_t pid,struct sockaddr_in addr){
    //r发送的大小 选项0  地址发到 大小
     sendto(sfd,sendbuf,r,0,(struct sockaddr*)&addr,sizeof(addr));
 }
-
 //（4）解包  读到的数据包 大小 进程id 进程id   
 void unpack(int num,pid_t pid,struct sockaddr_in from){
     struct timeval end;
