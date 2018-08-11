@@ -77,10 +77,13 @@ void unpack(int num,pid_t pid,struct sockaddr_in from){
 
     struct icmp *picmp = (struct icmp*)(recvbuf+(pip->ip_hl<<2));
     float d = diftime(&end,(struct timeval*)picmp->icmp_data);
-
+   if(picmp->icmp_id==pid)
+{
     printf("%d bytes from %s:icmp_seq=%d tt1=%d time=%.4f ms\n",DATA_LEN+8,inet_ntoa(from.sin_addr),ntohs(picmp->icmp_seq),
            pip->ip_ttl,
            d);
+
+    }
 
 }
 void recv_packet(int sfd,pid_t pid){
@@ -89,7 +92,6 @@ void recv_packet(int sfd,pid_t pid){
     memset(recvbuf,0x00,sizeof recvbuf);
     recvnum++;
     recvfrom(sfd,recvbuf,1024,0,(struct sockaddr*)&from,&len);
-
     unpack(recvnum,pid,from);
 }
   int main(int argc,char *argv[])
