@@ -42,6 +42,7 @@ unsigned short chksum(unsigned short *addr,int len)
     (end->tv_usec - begin->tv_usec) / 1000.0; 
        //*1000变成毫秒
 return ret;
+
 }
   //组包    num:ICMP报文的标识符字段
   int pack(int num,pid_t pid)
@@ -82,7 +83,6 @@ void unpack(int num,pid_t pid,struct sockaddr_in from){
     printf("%d bytes from %s:icmp_seq=%d tt1=%d time=%.4f ms\n",DATA_LEN+8,inet_ntoa(from.sin_addr),ntohs(picmp->icmp_seq),
            pip->ip_ttl,
            d);
-
     }
 
 }
