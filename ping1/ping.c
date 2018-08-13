@@ -84,6 +84,8 @@ void send_packet(int sfd,pid_t pid,struct sockaddr_in addr){
     sendto(sfd,sendbuf,r,0,(struct sockaddr*)&addr,sizeof(addr));
 }
 
+
+void unpack(int num,pid_t pid,struct sockaddr_in from);
 //（3）接收包
 void recv_packet(int sfd,pid_t pid){
     struct sockaddr_in from;//数据来自于哪  from为值结果参数
