@@ -34,9 +34,9 @@ unsigned short chksum(unsigned short *addr,int len)
     ret = (ret>>16)+(ret&0xffff);
     ret += (ret>>16);
     //取反
+   //
     return (unsigned short)~ret;
 }
-
 
 
 //计算两个时间差的毫秒数   
