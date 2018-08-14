@@ -3,7 +3,6 @@
 #include<sys/socket.h>
 #include<netinet/in.h>
 #include<arpa/inet.h>
-
 #include<netdb.h>
 #include<netinet/ip.h>
 #include<string.h>
@@ -19,6 +18,7 @@ char sendbuf[1024];//发送数据包
 char recvbuf[1024];//接收数据包
 unsigned short chksum(unsigned short *addr,int len)
 {
+
     unsigned int ret = 0;
     while(len>1)
     {
