@@ -1,7 +1,4 @@
-
 #include "httpServer.h"
-
-////2###
 int startUp(int port)//得到端口号
 {
     if(port < 1024)
