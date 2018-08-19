@@ -8,6 +8,6 @@ void LinkListPrintReverse(LinkList* phead)
         return;
     }
     LinkListPrintReverse(phead->next);
-    printf(,phead->next);
+    printf("%c",phead->next);
     return;
 }
