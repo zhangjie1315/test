@@ -5,6 +5,7 @@
 #include<arpa/inet.h>
 #include<netdb.h>
 #include<netinet/ip.h>
+
 #include<string.h>
 #include<stdlib.h>
 #include<unistd.h>
@@ -20,6 +21,7 @@ unsigned short chksum(unsigned short *addr,int len)
 {
     unsigned int ret = 0;
     while(len>1)
+        
     {
         ret += *addr;
             addr++;
