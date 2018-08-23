@@ -2,6 +2,10 @@
 int startUp(int port)//得到端口号
 {
 
+
+
+
+
     if(port < 1024)
     {
         printf("port must > 1024 !\n");
