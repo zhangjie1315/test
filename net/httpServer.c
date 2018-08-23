@@ -1,6 +1,7 @@
 #include "httpServer.h"
 int startUp(int port)//得到端口号
 {
+
     if(port < 1024)
     {
         printf("port must > 1024 !\n");
@@ -26,6 +27,7 @@ int startUp(int port)//得到端口号
     int keepAlive = 3;// 判定断开前的 KeepAlive 探测次数
     if(setsockopt(listen_fd, SOL_SOCKET, SO_KEEPALIVE, (void*)&keepAlive,sizeof(keepAlive)) == -1)
     {
+        
         printf("setsockopt SO_KEEPALIVE error!\n");
     }
 //绑定

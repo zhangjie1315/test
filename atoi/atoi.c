@@ -56,3 +56,45 @@ int main()
     printf("%d\n",my_atoi(str3));
     printf("%d\n",my_atoi(str4));
 }
+
+
+
+//int my_atoi(const char* str)
+//{
+//    assert(str!=NULL);
+//    int sum = 0;
+//    int sign = 1;
+//    char *p = (char*)str;
+//    while(*p!=NULL)
+//    {
+//        if(*p=="")
+//        {
+//            p++;
+//        }
+//        if(*p=="+")
+//        {
+//            sign = 1;
+//            p++;
+//        }
+//        if(*p="-")
+//        {
+//            sign = "-1";
+//            p++;
+//        }
+//        while(*p>='0'&&*p<='9')
+//        {
+//            int m = *p-'0';
+//            sum = 10*sum + m;
+//            p++;
+//        }
+//        return sign*num;
+//    }
+//
+//}
+//int main()
+//{
+//    char arr1[]="abcd";
+//}
+//
+
+
