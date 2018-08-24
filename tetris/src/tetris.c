@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <tetris.h>
+
 #include <def.h>
 #include <keyboard.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+
 #include <arpa/inet.h>
 #include <netinet/in.h>
 void draw_element(int x, int y, int c)
