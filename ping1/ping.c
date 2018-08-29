@@ -8,7 +8,6 @@
 #include<string.h>
 #include<stdlib.h>
 #include<unistd.h>
-
 #include<netinet/ip_icmp.h>
 //addr:需要计算检验和的数据起始地址
 //len:数据大小，单位是字节
