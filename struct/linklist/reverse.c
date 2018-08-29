@@ -2,7 +2,6 @@
 //每次取下一个节点放到头结点前边并将头指针前移
 void LinkListReverse(LinkNode **phead)
 {
-
     if(phead==NULL)
     {
         //非法输入
