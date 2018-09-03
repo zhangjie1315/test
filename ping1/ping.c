@@ -9,6 +9,7 @@
 #include<string.h>
 #include<stdlib.h>
 #include<unistd.h>
+
 #include<netinet/ip_icmp.h>
 //addr:需要计算检验和的数据起始地址
 //len:数据大小，单位是字节
@@ -41,8 +42,10 @@ unsigned short chksum(unsigned short *addr,int len)
 }
 
 
+
 //计算两个时间差的毫秒数   
 //两个结构体 
+//
   float diftime(struct timeval *end,struct timeval *begin)
 {      //变成微妙   两次取到时间 秒*1000变成多少毫秒   微妙/1000变成微妙 
    float ret = (end->tv_sec - begin->tv_sec) * 1000.0+ 
