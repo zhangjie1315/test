@@ -5,6 +5,7 @@ void LinkListInsertSp(LinkNode **phead,LinkNode *pos,LinkListType value)
 {
     if(phead==NULL||pos==NULL)
     {
+
         //非法输入
         return;
     }
@@ -15,6 +16,7 @@ void LinkListInsertSp(LinkNode **phead,LinkNode *pos,LinkListType value)
     }
     LinkNode *p =CreateNode(pos->data);
     p->next = pos->next;
+
     pos->next = p;
     pos->data = value;
     return;
