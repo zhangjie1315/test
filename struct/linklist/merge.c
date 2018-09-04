@@ -1,5 +1,6 @@
 LinkNode* LinkListMerge(LinkNode* phead1,LinkNode* phead2)
 {
+
     if(phead1==NULL)
     {
         return phead2;
@@ -21,6 +22,7 @@ LinkNode* LinkListMerge(LinkNode* phead1,LinkNode* phead2)
                 new_head=new_tail=cur1;
             }
             else {
+
                 new_tail->next=cur1;
                 new_tail=new_tail->next;
             }
