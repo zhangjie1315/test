@@ -43,11 +43,11 @@ LinkNode* LinkListMerge(LinkNode* phead1,LinkNode* phead2)
         }
     if(cur1!=NULL)
     {
-        new_tail->next=cur2;
+        new_tail->next=cur1;
     }
     if(cur2!=NULL)
     {
-        new_tail->dext=cur1;
+        new_tail->dext=cur2;
     }
     return new_head;
 }
