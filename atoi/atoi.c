@@ -12,6 +12,7 @@ int my_atoi(const char * str)
 {//str指针可以改变，但是指向的内容不能改变
   assert(str);//断言
   int num=0;
+
   int sign=1;//标志位
   char *p=(char *)str;
   while(*p!='\0')
@@ -19,11 +20,13 @@ int my_atoi(const char * str)
       if(*p==' ')
       {
           p++;
+
       }
       else if(*p=='+')
       {
           p++;
           sign=1;
+
       }
       else if(*p=='-')
       {
