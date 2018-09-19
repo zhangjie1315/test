@@ -10,10 +10,12 @@ void LinkListInsertSp(LinkNode **phead,LinkNode *pos,LinkListType value)
         return;
     }
     if(*phead==NULL)
+
     {
         //链表为空
         return;
     }
+
     LinkNode *p =CreateNode(pos->data);
     p->next = pos->next;
 
@@ -21,3 +23,4 @@ void LinkListInsertSp(LinkNode **phead,LinkNode *pos,LinkListType value)
     pos->data = value;
     return;
 }
+//

@@ -1,11 +1,11 @@
 LinkNode* LinkListMerge(LinkNode* phead1,LinkNode* phead2)
 {
-
     if(phead1==NULL)
     {
         return phead2;
     }
     if(phead2==NULL)
+
     {
         return phead1;
     }

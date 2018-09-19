@@ -3,10 +3,12 @@
 void LinkListReverse(LinkNode **phead)
 {
     if(phead==NULL)
+
     {
         //非法输入
         return;
     }
+
     if(*phead==NULL)
     {
         //空链表
